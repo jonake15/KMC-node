@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Register</title>
+    <style>
+      body {
+        background: url("./images/background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #cont {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div>
+        <img
+          src="./images/fore.png"
+          style="width: 40rem; position: absolute; right: -5rem"
+          alt=""
+        />
+      </div>
+
+      <form
+        action="/register"
+        style="width: 30rem; position: relative; top: 10%; left: 5%"
+        method="post"
+      >
+        <h3 style="color: white" class="">Create new account</h3>
+        <!-- <label for="username">Username:</label> -->
+        <div style="display: flex; gap: 10px">
+          <input
+            class="form-control"
+            type="text"
+            id="username"
+            placeholder="Username"
+            style="width: 50%"
+            name="username"
+            required
+          />
+          <!-- <br /> -->
+          <!-- <label for="fname">First Name:</label> -->
+          <input
+            class="form-control"
+            type="text"
+            id="fname"
+            style="width: 50%"
+            placeholder="First Name"
+            name="fname"
+            required
+          />
+        </div>
+
+        <br />
+        <div style="display: flex; gap: 10px">
+          <input
+            class="form-control"
+            type="text"
+            id="lname"
+            placeholder="Last Name"
+            name="lname"
+            style="width: 50%"
+            required
+          />
+
+          <input
+            class="form-control"
+            type="email"
+            id="email"
+            style="width: 50%"
+            placeholder="Email"
+            name="email"
+            required
+          />
+        </div>
+
+        <br />
+        <div style="display: flex; gap: 10px">
+          <input
+            class="form-control"
+            type="text"
+            id="country"
+            placeholder="Country"
+            name="country"
+            style="width: 50%"
+            required
+          />
+
+          <!-- <label for="phone">Phone:</label> -->
+          <input
+            class="form-control"
+            type="text"
+            id="phone"
+            placeholder="Phone"
+            style="width: 50%"
+            name="phone"
+            required
+          />
+        </div>
+        <br />
+
+        <select class="form-control" id="category" name="category" required>
+          <option value="" disabled selected>
+            Select a category <b>🔻</b>
+          </option>
+          <option value="customer">Personal</option>
+          <option value="dealer">Dealer</option>
+          <option value="supplier">Supplier</option>
+          <option value="supplier">Business</option></select
+        ><br />
+
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <br />
+        <!-- <label for="confirm_password">:</label> -->
+        <input
+          type="password"
+          class="form-control"
+          id="confirm_password"
+          name="confirm_password"
+          placeholder="Confirm Password"
+          required
+        />
+        <br />
+        <button
+          type="submit"
+          class="btn"
+          style="background-color: black; color: aliceblue"
+        >
+          Register
+        </button>
+        <p>
+          Have an account? <a style="color: blue" href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"
+></script>

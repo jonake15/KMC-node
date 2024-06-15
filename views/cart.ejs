@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <h1>Your Orders</h1>
+
+    <% for (const product of cart) { %>
+    <div class="cart-item">
+      <% if (product.imageUrl) { %>
+      <img src="<%= product.imageUrl %>" alt="<%= product.name %>" />
+      <% } %>
+      <h3><%= product.name %></h3>
+      <p>Quantity: <%= product.quantity %></p>
+      <p>$<%= product.price %> each</p>
+      <p>Total: $<%= product.price * product.quantity %></p>
+      <form action="/remove-from-cart" method="POST">
+        <input type="hidden" name="productId" value="<%= product.id %>" />
+        <button type="submit">Remove</button>
+      </form>
+    </div>
+    <% } %>
+
+    <div class="total-cost">
+      <h2>Total Cost: $<%= totalCost %></h2>
+    </div>
+
+    <div style="text-align: center">
+      <a href="/">Continue Shopping</a>
+      <a href="/checkout">Checkout</a>
+    </div>
+  </body>
+</html>

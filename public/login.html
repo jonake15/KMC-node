@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <title>Login</title>
+    <style>
+      body {
+        background: url("./images/background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #cont {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="cont">
+      <div>
+        <img
+          src="./images/fore.png"
+          style="width: 40rem; position: absolute; right: -5rem"
+          alt=""
+        />
+      </div>
+      <form
+        action="/login"
+        style="width: 20rem; position: relative; top: 25%; left: 5%"
+        method="post"
+      >
+        <h3 style="color: white" class="">Welcome back</h3>
+        <div>
+          <!-- <label for="username">UserName</label> -->
+          <input
+            type="username"
+            class="form-control"
+            id="username"
+            placeholder="Username"
+            aria-describedby="emailHelp"
+            name="username"
+          />
+        </div>
+        <br />
+        <div>
+          <!-- <label for="password" class="form-label">password</label> -->
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="password"
+            aria-describedby="emailHelp"
+            name="password"
+          />
+        </div>
+        <br />
+        <span
+          class="alert alert-success"
+          role="alert"
+          id="success"
+          style="display: none"
+        ></span>
+        <br />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          id="error"
+          style="display: none"
+        ></div>
+        <br />
+        <button
+          type="submit"
+          class="btn"
+          style="background-color: black; color: aliceblue"
+        >
+          Login
+        </button>
+        <p>
+          Dont have an account?
+          <a style="color: blue" href="register.html">Register</a>
+        </p>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

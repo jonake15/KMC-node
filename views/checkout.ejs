@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <h1>Checkout</h1>
+    <ul>
+        <% cart.forEach(product => { %>
+            <li>
+                <%= product.name %> - Quantity: <%= product.quantity %> - $<%= product.price %> each - Total: $<%= product.price * product.quantity %>
+            </li>
+        <% }); %>
+    </ul>
+    <h2>Total: $<%= total %></h2>
+    <form action="/checkout" method="post">
+        <button type="submit">Pay Now</button>
+    </form>
+    <a href="/cart">Go Back to Cart</a>
+</body>
+</html>
